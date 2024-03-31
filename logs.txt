@@ -1,0 +1,193 @@
+Microsoft Windows [Version 10.0.18363.476]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git init
+Initialized empty Git repository in C:/Users/User/Desktop/SI_2024_lab1_213259/.git/
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git remote add origin https://github.com/NikolovskaMarija/SI_2024_lab1_213259.git
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>echo >> README.md
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add .
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Initial commit"
+[master (root-commit) a7cfdcd] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add .
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Add starter code"
+[master c12793d] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git push --all
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.13 KiB | 580.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/NikolovskaMarija/SI_2024_lab1_213259.git
+ * [new branch]      master -> master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch bug1
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch bug2
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add .
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 4835f15] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add .
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 8abcf16] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch
+* bug1
+  bug2
+  master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add .
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 cf3fc22] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch
+  bug1
+* bug2
+  master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add .
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Call method makeBigStringFrom in main class"
+[bug2 2af3792] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git push --all origin
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.25 KiB | 427.00 KiB/s, done.
+Total 12 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 4 local objects.
+To https://github.com/NikolovskaMarija/SI_2024_lab1_213259.git
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch
+  bug1
+* bug2
+  master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout master
+Switched to branch 'master'
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git push --all origin
+Everything up-to-date
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git merge bug1
+Updating c12793d..cf3fc22
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git push --all origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/NikolovskaMarija/SI_2024_lab1_213259.git
+   c12793d..cf3fc22  master -> master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git merge bug2
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout bug2
+SILab1Main.java: needs merge
+error: you need to resolve your current index first
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git rebase master
+SILab1Main.java: needs merge
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git stash
+SILab1Main.java: needs merge
+error: could not write index
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git rebase master
+SILab1Main.java: needs merge
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout master
+SILab1Main.java: needs merge
+error: you need to resolve your current index first
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch
+  bug1
+  bug2
+* master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout bug2
+SILab1Main.java: needs merge
+error: you need to resolve your current index first
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git add SILab1Main.java
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git commit -m "Resolved"
+[master f150e44] Resolved
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git checkout master
+Already on 'master'
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git merge bug2
+Already up to date.
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git push --all origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 409 bytes | 409.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/NikolovskaMarija/SI_2024_lab1_213259.git
+   cf3fc22..f150e44  master -> master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>git branch
+  bug1
+  bug2
+* master
+
+C:\Users\User\Desktop\SI_2024_lab1_213259>echo >> logs.txt
