@@ -1,0 +1,24 @@
+Инсталирав Git а и на линкот https://github.com/settings/repositories, се најавив на GitHub, и направив репозиториум SI_2024_lab1_213259.
+Имав опција дали да биде приватен или јавен, како што требаше јас го направив приватен.
+-git branch -M master: мојата главна гранка сега од main во master.
+-SI_2024_lab1_213259: креирав директориум и го инизијализирав со помош на командата git init.
+-git remote add origin https://github.com/NikolovskaMarija/SI_2024_lab1_213259.git: локалниот репозиториум го поврзав со помош на оваа команда со оддалечениот.
+- echo>>README.md: вака го креирав фајлот README.md, потоа ги направив командите git add . i git commit-m "Initial commit", но пред да ги направам командите ја променив содржината со моето име, презиме и број на индекс и го зачував.
+- git add . и git commit -m "Add starter code"  па потоа направив git push --all
+-Ги направив branchovite со git branch:
+git branch bug1
+git branch bug2
+потоа направив checkout na git branch bug1, git add . потоа git commit -m "Fix wrong condition in filterOddLengthStrings"
+потоа направив checkout na git branch bug2, git add . потоа git commit -m "Fix wrong condition in makeBigStringFrom"
+-git push --all origin: за синхронизација
+-git merge bug1 па git push --all па git merge bug2 потоа git checkout bug2  потоа git add SILab1Main.java' git commit -m "Resolved problem"
+гранката не може да се спои со Fast Forwarding и затоа за гранките да ги push git checkout master потоа git merge bug2 потоа git push --all
+
+
+
+
+
+
+
+
+
